@@ -61,6 +61,18 @@
                 <&macro_tap>,
                 <&kp G &kp I &kp F>;
         };
+
+        Android_Copy: Android_Copy {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp K_CONTEXT_MENU>,
+                <&macro_tap>,
+                <&kp C>;
+
+            label = "ANDROID_COPY";
+        };
     };
 
     keymap {
