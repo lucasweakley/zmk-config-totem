@@ -73,6 +73,42 @@
 
             label = "ANDROID_COPY";
         };
+
+        Android_Paste: Android_Paste {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp K_CONTEXT_MENU>,
+                <&macro_press>,
+                <&kp V>;
+
+            label = "ANDROID_PASTE";
+        };
+
+        Android_Cut: Android_Cut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp K_CONTEXT_MENU>,
+                <&macro_press>,
+                <&kp X>;
+
+            label = "ANDROID_CUT";
+        };
+
+        Android_Selectall: Android_Selectall {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp K_CONTEXT_MENU>,
+                <&macro_press>,
+                <&kp A>;
+
+            label = "ANDROID_SELECTALL";
+        };
     };
 
     keymap {
@@ -123,10 +159,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none               &none      &none             &none          &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &none
-       &kp LC(LEFT_ARROW)  &kp F11    &kp LC(UP_ARROW)  &kp LC(RIGHT)  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&none  &kp LG(Z)           &kp LG(X)  &Android_Copy     &kp LG(V)      &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                      &none             &none          &none    &trans        &kp NUMBER_0  &none
+       &none               &none         &none           &none            &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &none
+       &Android_Selectall  &none         &kp LC(ESCAPE)  &kp LS(LA(TAB))  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
+&none  &none               &Android_Cut  &Android_Copy   &Android_Paste   &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                         &none           &none            &none    &trans        &kp NUMBER_0  &none
             >;
         };
 
