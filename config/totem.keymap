@@ -97,10 +97,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q               &kp W           &kp E           &kp R             &kp T                 &kp Y                    &kp U              &kp I                &kp O            &kp P
-            &mt A LEFT_CONTROL  &mt S LEFT_ALT  &mt D LEFT_GUI  &mt F LEFT_SHIFT  &kp G                 &kp H                    &mt J RIGHT_SHIFT  &mt K RIGHT_COMMAND  &mt L RIGHT_ALT  &mt SQT RIGHT_CONTROL
-&kp ESCAPE  &kp Z               &kp X           &kp C           &kp V             &kp B                 &kp N                    &kp M              &kp COMMA            &kp DOT          &kp FSLH               &kp SEMICOLON
-                                                &none           &lt 1 BACKSPACE   &mt LEFT_SHIFT TAB    &mt RIGHT_COMMAND ENTER  &lt 2 SPACE        &none
+            &kp Q  &kp W  &kp E               &kp R            &kp T                 &kp Y                    &kp U        &kp I      &kp O    &kp P
+            &kp A  &kp S  &kp D               &kp F            &kp G                 &kp H                    &kp J        &kp K      &kp L    &kp SQT
+&kp ESCAPE  &kp Z  &kp X  &kp C               &kp V            &kp B                 &kp N                    &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp SEMICOLON
+                          &kp K_CONTEXT_MENU  &lt 1 BACKSPACE  &mt LEFT_SHIFT TAB    &mt RIGHT_COMMAND ENTER  &lt 2 SPACE  &none
             >;
         };
 
@@ -123,10 +123,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none                            &none             &none                      &none                     &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &none
-       &mt LC(LEFT_ARROW) LEFT_CONTROL  &mt F11 LEFT_ALT  &mt LC(UP_ARROW) LEFT_GUI  &mt LC(RIGHT) LEFT_SHIFT  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&none  &kp LG(Z)                        &kp LG(X)         &kp LG(C)                  &kp LG(V)                 &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
-                                                          &none                      &none                     &none    &none         &kp NUMBER_0  &none
+       &none               &none      &none             &none          &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &none
+       &kp LC(LEFT_ARROW)  &kp F11    &kp LC(UP_ARROW)  &kp LC(RIGHT)  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
+&none  &kp LG(Z)           &kp LG(X)  &Android_Copy     &kp LG(V)      &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+                                      &none             &none          &none    &trans        &kp NUMBER_0  &none
             >;
         };
 
@@ -149,10 +149,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL                     &kp AT              &kp LEFT_BRACE                         &kp RIGHT_BRACE                   &kp PIPE     &kp CARET     &kp AMPS      &none       &none         &none
-        &mt UNDERSCORE LEFT_CONTROL  &mt MINUS LEFT_ALT  &mt LEFT_PARENTHESIS LS(LEFT_COMMAND)  &mt RIGHT_PARENTHESIS LEFT_SHIFT  &kp SQT      &kp C_MUTE    &kp LEFT      &kp DOWN    &kp UP_ARROW  &kp RIGHT
-&trans  &none                        &none               &kp LEFT_BRACKET                       &kp RIGHT_BRACKET                 &kp EQUAL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT    &kp BSLH   &trans
-                                                         &none                                  &kp LA(BACKSPACE)                 &none        &trans        &none         &trans
+        &kp EXCL        &kp AT     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp CARET     &kp AMPS      &none       &none         &none
+        &kp UNDERSCORE  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT      &kp C_MUTE    &kp LEFT      &kp DOWN    &kp UP_ARROW  &kp RIGHT
+&trans  &none           &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT    &kp BSLH   &trans
+                                   &none                 &kp LA(BACKSPACE)      &trans       &trans        &none         &trans
             >;
         };
 
