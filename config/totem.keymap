@@ -159,9 +159,9 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none               &none         &none           &none            &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &none
-       &Android_Selectall  &none         &kp LC(ESCAPE)  &kp LS(LA(TAB))  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &none
-&none  &none               &Android_Cut  &Android_Copy   &Android_Paste   &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none  &none
+       &none               &none         &none           &none            &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &kp SLASH
+       &Android_Selectall  &none         &kp LC(ESCAPE)  &kp LS(LA(TAB))  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMICOLON
+&none  &none               &Android_Cut  &Android_Copy   &Android_Paste   &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &none
                                          &none           &none            &none    &trans        &kp NUMBER_0  &none
             >;
         };
