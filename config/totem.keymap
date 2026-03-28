@@ -13,7 +13,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define BASE 0
 #define NAV  1
@@ -43,6 +42,11 @@
             timeout-ms = <100>;
             key-positions = <11 12 13>;
             bindings = <&kp ENTER>;
+        };
+
+        Space {
+            bindings = <&kp SPACE>;
+            key-positions = <22 23 24>;
         };
     };
 
@@ -133,10 +137,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-            &kp Q  &kp W  &kp E               &kp R            &kp T                 &kp Y                    &kp U        &kp I      &kp O    &kp P
-            &kp A  &kp S  &kp D               &kp F            &kp G                 &kp H                    &kp J        &kp K      &kp L    &kp SQT
-&kp ESCAPE  &kp Z  &kp X  &kp C               &kp V            &kp B                 &kp N                    &kp M        &kp COMMA  &kp DOT  &kp FSLH  &kp SEMICOLON
-                          &kp K_CONTEXT_MENU  &lt 1 BACKSPACE  &mt LEFT_SHIFT TAB    &mt RIGHT_COMMAND ENTER  &lt 2 SPACE  &none
+            &kp Q               &kp W           &kp E               &kp R             &kp T                 &kp Y                    &kp U              &kp I                &kp O            &kp P
+            &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_COMMAND D  &mt LEFT_SHIFT F  &kp G                 &kp H                    &mt RIGHT_SHIFT J  &mt RIGHT_COMMAND K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SQT
+&kp ESCAPE  &kp Z               &kp X           &kp C               &kp V             &kp B                 &kp N                    &kp M              &kp COMMA            &kp DOT          &kp FSLH               &kp SEMICOLON
+                                                &kp K_CONTEXT_MENU  &lt 1 BACKSPACE   &mt LEFT_SHIFT TAB    &mt RIGHT_COMMAND ENTER  &lt 2 SPACE        &mo 3
             >;
         };
 
@@ -159,10 +163,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-       &none               &none         &none           &none            &none    &kp MINUS     &kp N7        &kp N8        &kp NUMBER_9  &kp SLASH
-       &Android_Selectall  &none         &kp LC(ESCAPE)  &kp LS(LA(TAB))  &none    &kp PLUS      &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp SEMICOLON
-&none  &none               &Android_Cut  &Android_Copy   &Android_Paste   &none    &kp ASTERISK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &none
-                                         &none           &none            &none    &trans        &kp NUMBER_0  &none
+       &kp NUMBER_1        &kp NUMBER_2  &kp NUMBER_3    &kp NUMBER_4     &kp NUMBER_5    &kp NUMBER_6  &kp N7  &kp N8  &kp NUMBER_9  &kp NUMBER_0
+       &Android_Selectall  &none         &kp LC(ESCAPE)  &kp LS(LA(TAB))  &none           &trans        &trans  &trans  &trans        &kp SEMICOLON
+&none  &trans              &Android_Cut  &Android_Copy   &Android_Paste   &none           &trans        &trans  &trans  &trans        &trans         &none
+                                         &none           &none            &none           &trans        &trans  &none
             >;
         };
 
@@ -185,10 +189,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &kp EXCL        &kp AT     &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp PIPE     &kp CARET     &kp AMPS      &none       &none         &none
-        &kp UNDERSCORE  &kp MINUS  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SQT      &kp C_MUTE    &kp LEFT      &kp DOWN    &kp UP_ARROW  &kp RIGHT
-&trans  &none           &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp EQUAL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT    &kp BSLH   &trans
-                                   &none                 &kp LA(BACKSPACE)      &trans       &trans        &none         &trans
+        &kp EXCL                     &kp AT                &kp AT_SIGN                    &kp HASH                          &kp ASTERISK    &kp CARET     &kp AMPS      &none       &none         &kp NON_US_BACKSLASH
+        &mt LEFT_CONTROL UNDERSCORE  &mt LEFT_ALT MINUS    &mt LEFT_GUI LEFT_PARENTHESIS  &mt LEFT_SHIFT RIGHT_PARENTHESIS  &kp SQT         &kp C_MUTE    &kp LEFT      &kp DOWN    &kp UP_ARROW  &kp RIGHT
+&trans  &kp GRAVE                    &kp NON_US_BACKSLASH  &kp LEFT_BRACKET               &kp RIGHT_BRACKET                 &kp EQUAL       &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PREV  &kp C_NEXT    &trans                &trans
+                                                           &none                          &kp LA(BACKSPACE)                 &trans          &trans        &none         &trans
             >;
         };
 
@@ -211,10 +215,10 @@
             //                                     ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛   ┗━━━━━━━━━━━┻━━━━━━━━━━━┻━━━━━━━━━━━┛
 
             bindings = <
-        &sys_reset   &bt BT_CLR  &out OUT_TOG  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
-        &bootloader  &bt BT_NXT  &trans        &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
-&trans  &trans       &bt BT_PRV  &trans        &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
-                                 &trans        &trans  &trans    &trans  &trans  &trans
+        &sys_reset   &bt BT_CLR  &trans  &trans  &trans    &trans  &kp F7  &kp F8  &kp F9  &kp F12
+        &bootloader  &bt BT_NXT  &trans  &trans  &trans    &trans  &kp F4  &kp F5  &kp F6  &kp F11
+&trans  &trans       &bt BT_PRV  &trans  &trans  &trans    &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
+                                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
 
@@ -271,6 +275,15 @@
         };
 
         layer_6 {
+            bindings = <
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_7 {
             bindings = <
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
